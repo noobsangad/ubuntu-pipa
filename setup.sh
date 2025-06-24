@@ -12,8 +12,8 @@ systemctl --user unmask pulseaudio.service pulseaudio.socket
 systemctl --user enable pulseaudio.service pulseaudio.socket
 systemctl --user start pulseaudio.service pulseaudio.socket
 
-echo "=== Memperbarui paket dan menginstal dependensi ==="
-sudo apt update
-sudo apt install -y ubuntu-restricted-extras gstreamer1.0-pulseaudio
+echo "=== Memperbarui paket dan menginstal aplikasi penting ==="
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y gdebi gnome-tweaks neofetch ubuntu-restricted-extras gstreamer1.0-pulseaudio
 
 echo "=== Selesai! PulseAudio sekarang aktif. ==="
